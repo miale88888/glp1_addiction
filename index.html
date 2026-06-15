@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>GLP-1 Receptor Agonists in Substance Use Disorders — Clinical Evidence Synthesis</title>
+<meta name="description" content="A structured, evidence-graded synthesis of GLP-1 receptor agonist research across alcohol, nicotine, opioid, and stimulant use disorders." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,400..600&family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F1ECE1;
+    --paper-2:#E7DFD0;
+    --paper-card:#FBF8F1;
+    --ink:#14120D;
+    --ink-soft:#544E3F;
+    --ink-faint:#857C68;
+    --line:rgba(20,18,13,0.14);
+    --line-strong:rgba(20,18,13,0.32);
+    --accent:#1C6B57;       /* deep clinical green */
+    --accent-deep:#114537;
+    --rust:#B0492A;         /* terracotta / caution */
+    --gold:#B98A2E;
+
+    --strong:#1C6B57;
+    --moderate:#7F8B2C;
+    --emerging:#C6871C;
+    --weak:#A8553A;
+
+    --maxw:1180px;
+    --serif:"Fraunces",Georgia,serif;
+    --sans:"Archivo",-apple-system,sans-serif;
+    --mono:"IBM Plex Mono",ui-monospace,monospace;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background-color:var(--paper);
+    background-image:
+      radial-gradient(circle at 12% -5%, rgba(28,107,87,0.07), transparent 38%),
+      radial-gradient(circle at 100% 0%, rgba(176,73,42,0.06), transparent 42%);
+    color:var(--ink);
+    font-family:var(--sans);
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  /* subtle paper grain */
+  body::before{
+    content:"";
+    position:fixed;inset:0;z-index:0;pointer-events:none;
+    opacity:0.5;mix-blend-mode:multiply;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.045'/%3E%3C/svg%3E");
+  }
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;position:relative;z-index:1;}
+
+  a{color:inherit;}
+  h1,h2,h3,h4{margin:0;font-family:var(--serif);font-weight:400;letter-spacing:-0.01em;line-height:1.08;}
+
+  .kicker{
+    font-family:var(--mono);
+    font-size:12px;letter-spacing:0.22em;text-transform:uppercase;
+    color:var(--accent);font-weight:500;
+  }
+  .mono{font-family:var(--mono);}
+
+  /* ---------- HEADER ---------- */
+  header.masthead{
+    border-bottom:1.5px solid var(--ink);
+    padding-top:34px;padding-bottom:40px;
+    position:relative;
+  }
+  .top-rule{
+    display:flex;justify-content:space-between;align-items:center;
+    font-family:var(--mono);font-size:11.5px;letter-spacing:0.18em;
+    text-transform:uppercase;color:var(--ink-soft);
+    border-bottom:1px solid var(--line);padding-bottom:12px;margin-bottom:40px;
+  }
+  .top-rule .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--accent);margin-right:8px;vertical-align:middle;animation:pulse 2.6s infinite;}
+  @keyframes pulse{0%,100%{opacity:1;}50%{opacity:0.35;}}
+  .masthead h1{
+    font-size:clamp(40px,7.2vw,84px);
+    line-height:0.96;letter-spacing:-0.025em;
+    max-width:14ch;margin-bottom:22px;
+    font-weight:380;
+  }
+  .masthead h1 em{font-style:italic;color:var(--accent);}
+  .lede{
+    font-size:clamp(17px,2vw,20px);
+    color:var(--ink-soft);max-width:62ch;line-height:1.5;
+    font-weight:400;
+  }
+  .meta-row{
+    display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:30px;
+    font-family:var(--mono);font-size:12px;color:var(--ink-faint);
+    letter-spacing:0.04em;
+  }
+  .meta-row b{color:var(--ink);font-weight:600;}
+  .disclaimer-chip{
+    display:inline-flex;align-items:flex-start;gap:10px;
+    margin-top:26px;padding:13px 18px;
+    background:rgba(176,73,42,0.08);
+    border:1px solid rgba(176,73,42,0.4);
+    border-radius:3px;max-width:70ch;
+    font-size:13.5px;color:#7c3318;line-height:1.45;
+  }
+  .disclaimer-chip svg{flex:none;margin-top:2px;}
+
+  /* ---------- SECTION SCAFFOLD ---------- */
+  section{padding:72px 0;border-bottom:1px solid var(--line);}
+  .sec-head{display:flex;align-items:baseline;gap:18px;margin-bottom:8px;}
+  .sec-num{font-family:var(--mono);font-size:13px;color:var(--accent);font-weight:600;letter-spacing:0.1em;}
+  .sec-head h2{font-size:clamp(26px,3.6vw,40px);font-weight:400;letter-spacing:-0.02em;}
+  .sec-sub{color:var(--ink-soft);max-width:64ch;margin:14px 0 42px;font-size:16.5px;}
+
+  /* ---------- AT A GLANCE MATRIX ---------- */
+  .matrix{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--ink);background:var(--paper-card);}
+  .mcell{
+    padding:26px 22px 24px;border-right:1px solid var(--line);
+    position:relative;cursor:pointer;transition:background .25s;
+    text-align:left;background:none;border-top:none;border-bottom:none;border-left:none;font:inherit;color:inherit;
+  }
+  .mcell:last-child{border-right:none;}
+  .mcell:hover{background:var(--paper-2);}
+  .mcell .ico{font-size:22px;line-height:1;margin-bottom:16px;display:block;}
+  .mcell h3{font-size:21px;margin-bottom:4px;}
+  .mcell .verdict{font-family:var(--mono);font-size:11px;letter-spacing:0.12em;text-transform:uppercase;font-weight:600;margin-bottom:18px;display:block;}
+  .bar{height:6px;border-radius:6px;background:var(--paper-2);overflow:hidden;margin-bottom:6px;border:1px solid var(--line);}
+  .bar span{display:block;height:100%;width:0;border-radius:6px;transition:width 1.1s cubic-bezier(.2,.7,.2,1);}
+  .bar-label{font-family:var(--mono);font-size:10px;color:var(--ink-faint);letter-spacing:0.08em;display:flex;justify-content:space-between;}
+  .mcell .stat{margin-top:18px;font-family:var(--serif);font-size:30px;line-height:1;color:var(--ink);}
+  .mcell .stat small{font-size:13px;font-family:var(--sans);color:var(--ink-soft);display:block;margin-top:6px;line-height:1.35;font-weight:400;}
+
+  /* ---------- MECHANISM ---------- */
+  .mech-grid{display:grid;grid-template-columns:1.15fr 1fr;gap:54px;align-items:start;}
+  .mech-flow{display:flex;flex-direction:column;gap:0;}
+  .node{
+    background:var(--paper-card);border:1px solid var(--line-strong);
+    border-radius:4px;padding:18px 20px;position:relative;
+  }
+  .node .ntag{font-family:var(--mono);font-size:10.5px;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent);font-weight:600;}
+  .node h4{font-size:17px;margin:5px 0 5px;}
+  .node p{margin:0;font-size:14px;color:var(--ink-soft);line-height:1.45;}
+  .connector{width:2px;height:26px;background:repeating-linear-gradient(var(--accent) 0 5px, transparent 5px 10px);margin:0 auto;}
+  .connector.arrow::after{content:"▼";color:var(--accent);font-size:11px;display:block;text-align:center;margin-top:-3px;}
+  .mech-aside p{font-size:15.5px;color:var(--ink-soft);margin-top:0;}
+  .mech-aside .pullquote{
+    font-family:var(--serif);font-style:italic;font-size:23px;line-height:1.32;
+    color:var(--ink);border-left:3px solid var(--accent);padding-left:22px;margin:8px 0 26px;
+  }
+  .tagrow{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px;}
+  .tag{font-family:var(--mono);font-size:11px;letter-spacing:0.05em;padding:5px 11px;border:1px solid var(--line-strong);border-radius:20px;color:var(--ink-soft);}
+
+  /* ---------- DEEP DIVE TABS ---------- */
+  .tabs{display:flex;flex-wrap:wrap;gap:0;border:1px solid var(--ink);margin-bottom:0;}
+  .tab{
+    flex:1 1 auto;padding:15px 18px;background:var(--paper-card);border:none;border-right:1px solid var(--line);
+    font-family:var(--mono);font-size:12.5px;letter-spacing:0.08em;text-transform:uppercase;
+    cursor:pointer;color:var(--ink-soft);font-weight:500;transition:all .2s;position:relative;
+  }
+  .tab:last-child{border-right:none;}
+  .tab[aria-selected="true"]{background:var(--ink);color:var(--paper);}
+  .tab .swatch{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:8px;vertical-align:middle;}
+  .panel{display:none;border:1px solid var(--ink);border-top:none;background:var(--paper-card);padding:38px 36px;}
+  .panel.active{display:block;animation:fade .4s ease;}
+  @keyframes fade{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:none;}}
+  .panel-top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;align-items:flex-start;border-bottom:1px solid var(--line);padding-bottom:24px;margin-bottom:26px;}
+  .panel-top h3{font-size:30px;}
+  .panel-verdict{font-family:var(--mono);font-size:12px;letter-spacing:0.1em;text-transform:uppercase;font-weight:600;padding:7px 14px;border-radius:3px;color:#fff;white-space:nowrap;}
+  .panel-cols{display:grid;grid-template-columns:1.3fr 1fr;gap:40px;}
+  .panel h5{font-family:var(--mono);font-size:11.5px;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent);margin:0 0 14px;font-weight:600;}
+  .findings{list-style:none;padding:0;margin:0 0 26px;}
+  .findings li{position:relative;padding:0 0 16px 26px;font-size:15px;color:var(--ink);line-height:1.5;}
+  .findings li::before{content:"";position:absolute;left:2px;top:8px;width:9px;height:9px;border:2px solid var(--accent);border-radius:50%;}
+  .findings li b{font-weight:600;}
+  .kv{display:flex;justify-content:space-between;gap:14px;padding:12px 0;border-bottom:1px dashed var(--line);font-size:14px;}
+  .kv .k{color:var(--ink-soft);}
+  .kv .v{font-family:var(--mono);font-weight:600;text-align:right;}
+  .dont{background:rgba(176,73,42,0.06);border:1px solid rgba(176,73,42,0.28);border-radius:4px;padding:18px 20px;margin-top:22px;}
+  .dont h5{color:var(--rust);}
+  .dont p{margin:0;font-size:14px;color:#73331c;line-height:1.5;}
+
+  /* ---------- TRIALS TABLE ---------- */
+  .filterbar{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px;}
+  .fbtn{font-family:var(--mono);font-size:11.5px;letter-spacing:0.06em;text-transform:uppercase;padding:8px 15px;border:1px solid var(--line-strong);background:none;border-radius:20px;cursor:pointer;color:var(--ink-soft);transition:all .2s;}
+  .fbtn[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink);}
+  .tbl-scroll{overflow-x:auto;border:1px solid var(--ink);}
+  table{border-collapse:collapse;width:100%;min-width:760px;background:var(--paper-card);}
+  thead th{
+    font-family:var(--mono);font-size:10.5px;letter-spacing:0.1em;text-transform:uppercase;
+    text-align:left;padding:14px 16px;color:var(--ink-soft);border-bottom:1.5px solid var(--ink);font-weight:600;
+    position:sticky;top:0;background:var(--paper-2);
+  }
+  tbody td{padding:15px 16px;border-bottom:1px solid var(--line);font-size:14px;vertical-align:top;}
+  tbody tr:hover{background:var(--paper-2);}
+  tbody tr.hide{display:none;}
+  .study-name{font-weight:600;}
+  .study-name small{display:block;font-family:var(--mono);font-size:11px;color:var(--ink-faint);font-weight:400;margin-top:2px;}
+  .pill{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:0.06em;text-transform:uppercase;padding:3px 9px;border-radius:20px;color:#fff;font-weight:600;white-space:nowrap;}
+
+  /* ---------- LIMITATIONS ---------- */
+  .lim-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+  .lim{background:var(--paper-card);padding:26px 22px;}
+  .lim .num{font-family:var(--serif);font-size:30px;color:var(--rust);line-height:1;}
+  .lim h4{font-size:18px;margin:12px 0 8px;}
+  .lim p{margin:0;font-size:14px;color:var(--ink-soft);line-height:1.5;}
+
+  /* ---------- PIPELINE ---------- */
+  .pipe{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;}
+  .pcard{background:var(--paper-card);border:1px solid var(--line-strong);border-left:4px solid var(--accent);border-radius:0 4px 4px 0;padding:20px 22px;}
+  .pcard .ph{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:8px;}
+  .pcard h4{font-size:18px;}
+  .pcard .phase{font-family:var(--mono);font-size:10.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);font-weight:600;}
+  .pcard p{margin:0;font-size:14px;color:var(--ink-soft);line-height:1.45;}
+  .pcard .nct{font-family:var(--mono);font-size:11px;color:var(--ink-faint);margin-top:10px;}
+
+  /* ---------- REFERENCES / FOOTER ---------- */
+  .refs{list-style:none;counter-reset:r;padding:0;margin:0;column-count:2;column-gap:42px;}
+  .refs li{counter-increment:r;break-inside:avoid;padding:0 0 16px 30px;position:relative;font-size:13px;color:var(--ink-soft);line-height:1.45;}
+  .refs li::before{content:counter(r);position:absolute;left:0;top:0;font-family:var(--mono);font-size:11px;color:var(--accent);font-weight:600;border:1px solid var(--line-strong);width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;}
+  .refs li b{color:var(--ink);font-weight:600;}
+  footer{padding:48px 0 64px;}
+  .foot-disc{font-size:13px;color:var(--ink-faint);max-width:80ch;line-height:1.55;border-top:1px solid var(--line);padding-top:26px;}
+  .foot-brand{font-family:var(--serif);font-style:italic;font-size:18px;margin-bottom:6px;}
+
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1);}
+  .reveal.in{opacity:1;transform:none;}
+
+  @media(max-width:860px){
+    .matrix{grid-template-columns:repeat(2,1fr);}
+    .mcell:nth-child(2){border-right:none;}
+    .mcell:nth-child(1),.mcell:nth-child(2){border-bottom:1px solid var(--line);}
+    .mech-grid{grid-template-columns:1fr;gap:36px;}
+    .panel-cols{grid-template-columns:1fr;gap:28px;}
+    .lim-grid{grid-template-columns:1fr;}
+    .pipe{grid-template-columns:1fr;}
+    .refs{column-count:1;}
+    .tab{flex:1 1 50%;}
+  }
+  @media(max-width:520px){
+    .wrap{padding:0 18px;}
+    .matrix{grid-template-columns:1fr;}
+    .mcell{border-right:none!important;border-bottom:1px solid var(--line);}
+    .meta-row{gap:8px 18px;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ===================== HEADER ===================== -->
+<header class="masthead">
+  <div class="wrap">
+    <div class="top-rule">
+      <span><span class="dot"></span>Clinical Evidence Synthesis</span>
+      <span>Incretin Therapies × Addiction Medicine</span>
+    </div>
+    <p class="kicker">GLP-1 Receptor Agonists</p>
+    <h1>The diabetes drug that keeps <em>turning down the volume</em> on craving</h1>
+    <p class="lede">A structured, evidence-graded reading of what GLP-1 receptor agonists — semaglutide, liraglutide, exenatide and newer dual agonists — actually do across four substance use disorders. Where the signal is real, where it is merely suggestive, and where it has so far failed.</p>
+    <div class="meta-row">
+      <span>Evidence through <b>May 2026</b></span>
+      <span>Substances covered: <b>Alcohol · Nicotine · Opioid · Stimulant</b></span>
+      <span>Study types: <b>RCT · Real-world cohort · Preclinical</b></span>
+    </div>
+    <div class="disclaimer-chip">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#b0492a" stroke-width="2"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg>
+      <span><b>No GLP-1 receptor agonist is approved by any regulator for a substance use disorder.</b> Every use described here is investigational or off-label. This page summarizes published research for general information; it is not medical advice and is not a substitute for a clinician.</span>
+    </div>
+  </div>
+</header>
+
+<!-- ===================== AT A GLANCE ===================== -->
+<section id="glance">
+  <div class="wrap reveal">
+    <div class="sec-head"><span class="sec-num">01</span><h2>The evidence, at a glance</h2></div>
+    <p class="sec-sub">Four disorders, four very different stories. The strength rating below reflects the <em>quantity and quality</em> of human evidence — randomized trials weigh more than observational signals, which weigh more than anecdote. Tap a column to jump to the detail.</p>
+
+    <div class="matrix" id="matrix">
+      <button class="mcell" data-jump="alcohol">
+        <span class="ico">🥃</span>
+        <h3>Alcohol</h3>
+        <span class="verdict" style="color:var(--strong)">Strongest signal</span>
+        <div class="bar"><span data-w="90" style="background:var(--strong)"></span></div>
+        <div class="bar-label"><span>Evidence</span><span>9 / 10</span></div>
+        <div class="stat" data-count="13.7" data-suffix=" pp"><span style="visibility:hidden">0</span><small>fewer heavy-drinking days vs placebo in the 2026 Lancet RCT (treatment difference)</small></div>
+      </button>
+      <button class="mcell" data-jump="nicotine">
+        <span class="ico">🚬</span>
+        <h3>Nicotine</h3>
+        <span class="verdict" style="color:var(--moderate)">Mixed / modest</span>
+        <div class="bar"><span data-w="58" style="background:var(--moderate)"></span></div>
+        <div class="bar-label"><span>Evidence</span><span>6 / 10</span></div>
+        <div class="stat" data-count="32" data-suffix="%"><span style="visibility:hidden">0</span><small>lower tobacco-disorder diagnoses with semaglutide in real-world diabetes data</small></div>
+      </button>
+      <button class="mcell" data-jump="opioid">
+        <span class="ico">💊</span>
+        <h3>Opioid</h3>
+        <span class="verdict" style="color:var(--emerging)">Emerging</span>
+        <div class="bar"><span data-w="42" style="background:var(--emerging)"></span></div>
+        <div class="bar-label"><span>Evidence</span><span>4 / 10</span></div>
+        <div class="stat" data-count="40" data-suffix="%"><span style="visibility:hidden">0</span><small>lower opioid-overdose rate in 503,747 patients (observational only)</small></div>
+      </button>
+      <button class="mcell" data-jump="stimulant">
+        <span class="ico">❄️</span>
+        <h3>Stimulant</h3>
+        <span class="verdict" style="color:var(--weak)">Inconclusive</span>
+        <div class="bar"><span data-w="16" style="background:var(--weak)"></span></div>
+        <div class="bar-label"><span>Evidence</span><span>2 / 10</span></div>
+        <div class="stat" data-count="0" data-suffix=""><span style="visibility:hidden">0</span><small>measurable effect on cocaine use in the one human trial run to date</small></div>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== MECHANISM ===================== -->
+<section id="mechanism">
+  <div class="wrap reveal">
+    <div class="sec-head"><span class="sec-num">02</span><h2>Why a gut hormone touches addiction</h2></div>
+    <p class="sec-sub">GLP-1 is a hormone released by the gut and brainstem after eating. Its receptors, it turns out, sit not only on the pancreas but throughout the brain's reward circuitry — which is why a drug built for blood sugar keeps showing up in addiction research.</p>
+
+    <div class="mech-grid">
+      <div class="mech-flow">
+        <div class="node">
+          <span class="ntag">Origin</span>
+          <h4>Gut &amp; brainstem release GLP-1</h4>
+          <p>Endogenous GLP-1 signals satiety and regulates glucose. GLP-1 receptor agonists are engineered to mimic it and persist far longer in the body.</p>
+        </div>
+        <div class="connector arrow"></div>
+        <div class="node">
+          <span class="ntag">Relay — NTS</span>
+          <h4>Nucleus tractus solitarius</h4>
+          <p>The brainstem hub that receives gut signals and projects upward into the brain's motivation centers.</p>
+        </div>
+        <div class="connector arrow"></div>
+        <div class="node">
+          <span class="ntag">Reward core — VTA → NAc</span>
+          <h4>Mesolimbic dopamine pathway</h4>
+          <p>Agonism here blunts the dopamine surge that drugs, alcohol and nicotine hijack — dampening their reinforcing "pull." Animal work also implicates altered central GABA signaling.</p>
+        </div>
+        <div class="connector arrow"></div>
+        <div class="node">
+          <span class="ntag">Aversion gate — habenula</span>
+          <h4>Lateral habenula</h4>
+          <p>A separate circuit, especially relevant to nicotine, where GLP-1 signaling shapes how much of a substance feels like "enough."</p>
+        </div>
+        <div class="connector arrow"></div>
+        <div class="node" style="border-color:var(--accent);background:rgba(28,107,87,0.06)">
+          <span class="ntag">Net behavioral effect</span>
+          <h4>↓ craving · ↓ incentive salience · ↓ consumption</h4>
+          <p>Across species, the consistent readout is reduced wanting and intake — not a blockade, but a turning-down of the reward's grip.</p>
+        </div>
+      </div>
+
+      <aside class="mech-aside">
+        <p class="pullquote">The leading hypothesis is that these drugs reduce the <em>incentive salience</em> of a reward — how much it commands attention and effort — rather than blocking pleasure outright.</p>
+        <p>This shared mechanism is exactly why the same molecule shows up in alcohol, nicotine and opioid research at once: addictive substances converge on overlapping reward circuitry, and GLP-1 signaling appears to act upstream of that convergence.</p>
+        <p>It also predicts the pattern we see in the data — a robust effect on appetitive, dopamine-heavy behaviors (drinking, eating, smoking) and a weaker, less consistent effect where the pharmacology is different (stimulants).</p>
+        <div class="tagrow">
+          <span class="tag">VTA</span><span class="tag">Nucleus accumbens</span><span class="tag">NTS</span><span class="tag">Lateral habenula</span><span class="tag">Dopamine</span><span class="tag">Central GABA</span>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== DEEP DIVES ===================== -->
+<section id="deepdive">
+  <div class="wrap reveal">
+    <div class="sec-head"><span class="sec-num">03</span><h2>Substance by substance</h2></div>
+    <p class="sec-sub">The same drug class, four separate evidence bases. Below, what each one has actually shown in humans — and the honest gaps.</p>
+
+    <div class="tabs" role="tablist" id="tablist">
+      <button class="tab" role="tab" aria-selected="true" data-key="alcohol"><span class="swatch" style="background:var(--strong)"></span>Alcohol</button>
+      <button class="tab" role="tab" aria-selected="false" data-key="nicotine"><span class="swatch" style="background:var(--moderate)"></span>Nicotine</button>
+      <button class="tab" role="tab" aria-selected="false" data-key="opioid"><span class="swatch" style="background:var(--emerging)"></span>Opioid</button>
+      <button class="tab" role="tab" aria-selected="false" data-key="stimulant"><span class="swatch" style="background:var(--weak)"></span>Stimulant</button>
+    </div>
+
+    <!-- ALCOHOL -->
+    <div class="panel active" data-panel="alcohol">
+      <div class="panel-top">
+        <div>
+          <h3>Alcohol use disorder</h3>
+          <p style="margin:8px 0 0;color:var(--ink-soft);max-width:60ch;">The flagship indication. Two randomized trials in 2025–2026 converted a decade of preclinical and real-world hints into genuine clinical evidence.</p>
+        </div>
+        <span class="panel-verdict" style="background:var(--strong)">Strongest signal · 9/10</span>
+      </div>
+      <div class="panel-cols">
+        <div>
+          <h5>What the evidence shows</h5>
+          <ul class="findings">
+            <li><b>SEMALCO RCT (Lancet, 2026)</b> — 108 adults with moderate–severe AUD plus obesity. Semaglutide 2.4 mg + CBT cut heavy-drinking days by <b>13.7 percentage points more than placebo</b> (p=0.0015), with moderate effect sizes and a number-needed-to-treat of ~4.3 — favorable versus existing approved medications.</li>
+            <li><b>Hendershot RCT (JAMA Psychiatry, 2025)</b> — a phase-2 trial in 48 non-treatment-seeking adults. Even at low doses over 9 weeks, semaglutide reduced weekly alcohol intake, cravings and heavy-drinking days; smokers in the trial also cut cigarettes per day.</li>
+            <li><b>Real-world cohort (Nature Communications, 2024)</b> — among 83,825 patients with obesity, semaglutide was linked to a <b>50–56% lower</b> rate of both new and recurrent AUD diagnoses versus other anti-obesity drugs; the pattern held in ~600,000 patients with diabetes.</li>
+            <li><b>Earlier exenatide RCT (2022)</b> — no overall effect on drinking, but reduced heavy drinking and brain cue-reactivity in the subgroup with obesity — an early hint that body weight and drug generation matter.</li>
+          </ul>
+        </div>
+        <div>
+          <h5>Key numbers — SEMALCO trial</h5>
+          <div class="kv"><span class="k">Design</span><span class="v">RCT · 26 wk · double-blind</span></div>
+          <div class="kv"><span class="k">Participants</span><span class="v">108 (85% severe AUD)</span></div>
+          <div class="kv"><span class="k">Dose</span><span class="v">Semaglutide 2.4 mg/wk</span></div>
+          <div class="kv"><span class="k">Heavy-drinking-day Δ</span><span class="v">−13.7 pp vs placebo</span></div>
+          <div class="kv"><span class="k">Alcohol intake Δ</span><span class="v">−1,550 vs −1,026 g/30d</span></div>
+          <div class="kv"><span class="k">NNT (WHO risk drop)</span><span class="v">≈ 4.3</span></div>
+          <div class="dont">
+            <h5>What we still don't know</h5>
+            <p>Both RCTs are modest in size and short in duration; the larger one required comorbid obesity, so effects in normal-weight drinkers are unproven. Durability after stopping, and whether lifelong dosing is needed, remain open. A definitive phase-3 trial is only now beginning.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- NICOTINE -->
+    <div class="panel" data-panel="nicotine">
+      <div class="panel-top">
+        <div>
+          <h3>Nicotine / tobacco use disorder</h3>
+          <p style="margin:8px 0 0;color:var(--ink-soft);max-width:60ch;">A real but narrower benefit: the clearest effect so far is on the weight gain that drives so many people back to smoking, with a more modest effect on quitting itself.</p>
+        </div>
+        <span class="panel-verdict" style="background:var(--moderate)">Mixed / modest · 6/10</span>
+      </div>
+      <div class="panel-cols">
+        <div>
+          <h5>What the evidence shows</h5>
+          <ul class="findings">
+            <li><b>Post-cessation weight gain</b> is the most consistent win. In a pooled analysis of three RCTs (410 participants), people who quit while on a GLP-1 agonist <b>lost</b> weight while controls gained — removing a major relapse trigger.</li>
+            <li><b>Cessation itself</b> shows a smaller, less consistent benefit. Exenatide trials found stronger effects in heavier smokers and those without prediabetes or obesity; one dulaglutide + varenicline subgroup showed no added benefit.</li>
+            <li><b>Real-world diabetes data</b> — among ~223,000 patients with tobacco use disorder, semaglutide was associated with 12–30% fewer tobacco-disorder diagnoses and 40–70% fewer prescriptions for cessation aids, with effects emerging within the first month.</li>
+            <li><b>Mechanism</b> uniquely implicates the lateral habenula in controlling nicotine intake, alongside the shared reward pathway.</li>
+          </ul>
+        </div>
+        <div>
+          <h5>Key numbers</h5>
+          <div class="kv"><span class="k">Pooled RCTs</span><span class="v">3 trials · 410 patients</span></div>
+          <div class="kv"><span class="k">On-drug abstainers</span><span class="v">Net weight loss</span></div>
+          <div class="kv"><span class="k">Real-world TUD Δ</span><span class="v">−12% to −30%</span></div>
+          <div class="kv"><span class="k">Cessation-Rx Δ</span><span class="v">−40% to −70%</span></div>
+          <div class="kv"><span class="k">Agents studied</span><span class="v">Exenatide, semaglutide, dulaglutide</span></div>
+          <div class="dont">
+            <h5>What we still don't know</h5>
+            <p>Long-term abstinence rates remain modest, and cravings plus weight rebound can return after stopping. Dedicated, adequately powered cessation trials with newer agents are still in progress rather than complete.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- OPIOID -->
+    <div class="panel" data-panel="opioid">
+      <div class="panel-top">
+        <div>
+          <h3>Opioid use disorder</h3>
+          <p style="margin:8px 0 0;color:var(--ink-soft);max-width:60ch;">Striking observational signals on overdose risk — but, crucially, almost no randomized human data yet. This is a promise, not a proof.</p>
+        </div>
+        <span class="panel-verdict" style="background:var(--emerging)">Emerging · 4/10</span>
+      </div>
+      <div class="panel-cols">
+        <div>
+          <h5>What the evidence shows</h5>
+          <ul class="findings">
+            <li><b>Overdose protection (Addiction, 2025)</b> — across 503,747 patients with OUD, a GLP-1 / GIP prescription was associated with a <b>~40% lower</b> rate of opioid overdose (adjusted IRR 0.60). In the same dataset, AUD patients had ~50% lower alcohol-intoxication rates.</li>
+            <li><b>Target-trial emulation (JAMA Network Open, 2024)</b> — in patients with both diabetes and OUD, semaglutide was linked to roughly <b>halved</b> opioid-overdose risk versus other antidiabetic drugs.</li>
+            <li><b>Early clinical &amp; preclinical</b> — a small pilot reported reduced opioid craving; in rodents, liraglutide cut cue- and drug-induced heroin seeking.</li>
+            <li>A randomized trial is now testing semaglutide <em>added to</em> standard medications (buprenorphine or methadone) for OUD.</li>
+          </ul>
+        </div>
+        <div>
+          <h5>Key numbers</h5>
+          <div class="kv"><span class="k">OUD cohort</span><span class="v">503,747 patients</span></div>
+          <div class="kv"><span class="k">Overdose IRR</span><span class="v">0.60 (0.43–0.83)</span></div>
+          <div class="kv"><span class="k">Design</span><span class="v">Retrospective EHR</span></div>
+          <div class="kv"><span class="k">Randomized data</span><span class="v">Pilot only</span></div>
+          <div class="kv"><span class="k">Active RCT</span><span class="v">Semaglutide + MOUD</span></div>
+          <div class="dont">
+            <h5>What we still don't know</h5>
+            <p>These are associations, not causation: people prescribed GLP-1 drugs differ systematically from those who aren't, and residual confounding is hard to rule out. Until the randomized trials report, opioid use should be considered an open question — not an established use.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STIMULANT -->
+    <div class="panel" data-panel="stimulant">
+      <div class="panel-top">
+        <div>
+          <h3>Stimulant (cocaine) use disorder</h3>
+          <p style="margin:8px 0 0;color:var(--ink-soft);max-width:60ch;">The honest outlier. The one controlled human test was negative, and the pharmacology gives a plausible reason why.</p>
+        </div>
+        <span class="panel-verdict" style="background:var(--weak)">Inconclusive · 2/10</span>
+      </div>
+      <div class="panel-cols">
+        <div>
+          <h5>What the evidence shows</h5>
+          <ul class="findings">
+            <li><b>The one human trial was negative.</b> A double-blind, within-subject study gave a single acute dose of exenatide to people with cocaine use disorder and saw <b>no change</b> in cocaine intake, wanting, or self-reported euphoria.</li>
+            <li><b>Major caveats</b> — it used a single dose of an older-generation agent, far from the sustained, high-dose regimens that work elsewhere. It cannot rule out a benefit from modern agents given properly.</li>
+            <li><b>Why stimulants may differ</b> — cocaine acts very directly on dopamine reuptake, a different pharmacological lever than the appetitive, satiety-linked rewards where GLP-1 drugs perform best.</li>
+            <li>Some preclinical work hints at effects on stimulant reward, but it has not translated to humans.</li>
+          </ul>
+        </div>
+        <div>
+          <h5>Key numbers</h5>
+          <div class="kv"><span class="k">Human trials</span><span class="v">1 (acute, crossover)</span></div>
+          <div class="kv"><span class="k">Agent</span><span class="v">Exenatide (single dose)</span></div>
+          <div class="kv"><span class="k">Effect on intake</span><span class="v">None detected</span></div>
+          <div class="kv"><span class="k">Effect on craving</span><span class="v">None detected</span></div>
+          <div class="kv"><span class="k">Newer-agent data</span><span class="v">Absent</span></div>
+          <div class="dont">
+            <h5>What we still don't know</h5>
+            <p>Essentially everything. Whether semaglutide or tirzepatide, dosed to steady state, could do anything for stimulant use is untested. For now the responsible reading is "no demonstrated benefit," not "ruled out."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TRIALS TABLE ===================== -->
+<section id="trials">
+  <div class="wrap reveal">
+    <div class="sec-head"><span class="sec-num">04</span><h2>Landmark studies</h2></div>
+    <p class="sec-sub">The core human evidence in one place. Filter by substance; sorted roughly by strength of design.</p>
+
+    <div class="filterbar" id="filterbar">
+      <button class="fbtn" data-f="all" aria-pressed="true">All</button>
+      <button class="fbtn" data-f="alcohol" aria-pressed="false">Alcohol</button>
+      <button class="fbtn" data-f="nicotine" aria-pressed="false">Nicotine</button>
+      <button class="fbtn" data-f="opioid" aria-pressed="false">Opioid</button>
+      <button class="fbtn" data-f="stimulant" aria-pressed="false">Stimulant</button>
+    </div>
+
+    <div class="tbl-scroll">
+      <table id="trialtable">
+        <thead>
+          <tr><th>Study</th><th>Design</th><th>N</th><th>Key finding</th><th>Grade</th></tr>
+        </thead>
+        <tbody>
+          <tr data-sub="alcohol">
+            <td class="study-name">Klausen / SEMALCO<small>Lancet · 2026</small></td>
+            <td>RCT · 26 wk · semaglutide 2.4 mg + CBT</td><td>108</td>
+            <td>Heavy-drinking days fell 13.7 pp more than placebo (p=0.0015); NNT ≈ 4.3.</td>
+            <td><span class="pill" style="background:var(--strong)">Strong</span></td>
+          </tr>
+          <tr data-sub="alcohol">
+            <td class="study-name">Hendershot et al.<small>JAMA Psychiatry · 2025</small></td>
+            <td>Phase-2 RCT · 9 wk · low-dose semaglutide</td><td>48</td>
+            <td>Lower alcohol intake, craving &amp; heavy-drinking days; fewer cigarettes in smokers.</td>
+            <td><span class="pill" style="background:var(--strong)">Strong</span></td>
+          </tr>
+          <tr data-sub="alcohol">
+            <td class="study-name">Wang, Volkow et al.<small>Nature Communications · 2024</small></td>
+            <td>Real-world EHR cohort</td><td>83,825</td>
+            <td>50–56% lower new &amp; recurrent AUD diagnoses vs other anti-obesity drugs.</td>
+            <td><span class="pill" style="background:var(--moderate)">Moderate</span></td>
+          </tr>
+          <tr data-sub="alcohol">
+            <td class="study-name">Klausen et al. (exenatide)<small>JCI Insight · 2022</small></td>
+            <td>RCT · exenatide once-weekly</td><td>127</td>
+            <td>No overall effect; reduced drinking &amp; cue-reactivity in the obesity subgroup.</td>
+            <td><span class="pill" style="background:var(--weak)">Mixed</span></td>
+          </tr>
+          <tr data-sub="nicotine">
+            <td class="study-name">Pooled cessation analysis<small>3 RCTs · 2025</small></td>
+            <td>Meta-analysis of RCTs</td><td>410</td>
+            <td>Prevented post-quit weight gain; modest effect on abstinence itself.</td>
+            <td><span class="pill" style="background:var(--moderate)">Moderate</span></td>
+          </tr>
+          <tr data-sub="nicotine">
+            <td class="study-name">Wang et al. (TUD)<small>Real-world · 2024</small></td>
+            <td>EHR cohort · semaglutide vs other antidiabetics</td><td>222,942</td>
+            <td>12–30% fewer tobacco-disorder diagnoses; 40–70% fewer cessation prescriptions.</td>
+            <td><span class="pill" style="background:var(--moderate)">Moderate</span></td>
+          </tr>
+          <tr data-sub="nicotine">
+            <td class="study-name">Yammine et al. (exenatide)<small>Secondary analysis</small></td>
+            <td>RCT subgroup analysis</td><td>—</td>
+            <td>Greater benefit in heavier smokers without prediabetes/obesity.</td>
+            <td><span class="pill" style="background:var(--moderate)">Moderate</span></td>
+          </tr>
+          <tr data-sub="opioid">
+            <td class="study-name">Qeadan et al.<small>Addiction · 2025</small></td>
+            <td>Retrospective EHR cohort</td><td>503,747</td>
+            <td>~40% lower opioid-overdose rate (aIRR 0.60) with GLP-1/GIP prescription.</td>
+            <td><span class="pill" style="background:var(--emerging)">Emerging</span></td>
+          </tr>
+          <tr data-sub="opioid">
+            <td class="study-name">Wang et al. (overdose)<small>JAMA Network Open · 2024</small></td>
+            <td>Target-trial emulation</td><td>T2D + OUD</td>
+            <td>~50% lower opioid-overdose risk vs other antidiabetic medications.</td>
+            <td><span class="pill" style="background:var(--emerging)">Emerging</span></td>
+          </tr>
+          <tr data-sub="opioid">
+            <td class="study-name">Grigson pilot<small>Penn State</small></td>
+            <td>Small clinical trial</td><td>Pilot</td>
+            <td>GLP-1 agonist reduced opioid craving in people with OUD.</td>
+            <td><span class="pill" style="background:var(--emerging)">Emerging</span></td>
+          </tr>
+          <tr data-sub="stimulant">
+            <td class="study-name">Exenatide cocaine study<small>Within-subject crossover</small></td>
+            <td>Single acute dose · double-blind</td><td>Small</td>
+            <td>No change in cocaine intake, wanting, or euphoria.</td>
+            <td><span class="pill" style="background:var(--weak)">Negative</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== LIMITATIONS ===================== -->
+<section id="limits">
+  <div class="wrap reveal">
+    <div class="sec-head"><span class="sec-num">05</span><h2>Read this before you get excited</h2></div>
+    <p class="sec-sub">The honest counterweight. Promising is not the same as proven, and most of the eye-catching numbers above come with serious asterisks.</p>
+    <div class="lim-grid">
+      <div class="lim"><div class="num">01</div><h4>Observational ≠ causal</h4><p>The biggest numbers come from health-record studies. People prescribed GLP-1 drugs differ from those who aren't, and no statistical adjustment fully removes that bias.</p></div>
+      <div class="lim"><div class="num">02</div><h4>Small, short RCTs</h4><p>The strongest randomized evidence — in alcohol — rests on trials of ~50–110 people over a few months. None is a definitive phase-3 study, and most required comorbid obesity.</p></div>
+      <div class="lim"><div class="num">03</div><h4>Zero approvals</h4><p>No regulator has approved any of these drugs for any addiction. All clinical use is off-label, without dosing or safety data specific to this purpose.</p></div>
+      <div class="lim"><div class="num">04</div><h4>Side effects &amp; lean mass</h4><p>Nausea and other GI effects are common, and muscle-mass loss is a growing concern — especially in people who are not overweight to begin with.</p></div>
+      <div class="lim"><div class="num">05</div><h4>Durability unknown</h4><p>Benefits may fade once the drug stops, raising the prospect of indefinite treatment for a chronic condition — with all the cost and access problems that implies.</p></div>
+      <div class="lim"><div class="num">06</div><h4>Cost &amp; equity</h4><p>These medicines are expensive and frequently in short supply. Even if trials succeed, who can actually obtain them is a separate, unsolved question.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PIPELINE ===================== -->
+<section id="pipeline">
+  <div class="wrap reveal">
+    <div class="sec-head"><span class="sec-num">06</span><h2>What's coming next</h2></div>
+    <p class="sec-sub">The field is moving from "interesting signal" to "test it properly." A handful of trials over the next few years will decide whether any of this becomes real medicine.</p>
+    <div class="pipe">
+      <div class="pcard">
+        <div class="ph"><h4>Phase-3 AUD trial in veterans</h4><span class="phase">Phase 3</span></div>
+        <p>The first large, definitive randomized test of semaglutide 2.4 mg for moderate–severe alcohol use disorder, run by the U.S. VA. The result most likely to settle the alcohol question.</p>
+        <div class="nct">NCT07218354 · ~2026 start · est. completion 2029</div>
+      </div>
+      <div class="pcard">
+        <div class="ph"><h4>Semaglutide added to OUD medication</h4><span class="phase">Phase 2</span></div>
+        <p>Tests whether semaglutide on top of buprenorphine or methadone reduces illicit opioid use — the first proper randomized look at the overdose signal.</p>
+        <div class="nct">NCT06548490 · semaglutide + MOUD</div>
+      </div>
+      <div class="pcard">
+        <div class="ph"><h4>Oral semaglutide (Rybelsus) for AUD</h4><span class="phase">Completed</span></div>
+        <p>A randomized trial of the daily oral formulation in adults with alcohol use disorder; results will broaden the dosing picture beyond injections.</p>
+        <div class="nct">NCT05892432 · completed 2025</div>
+      </div>
+      <div class="pcard">
+        <div class="ph"><h4>Smoking-cessation RCTs with fMRI</h4><span class="phase">Recruiting</span></div>
+        <p>Trials pairing GLP-1 agonists with objective measures — exhaled CO, brain imaging — to pin down whether the cessation benefit is real and mechanistic.</p>
+        <div class="nct">Multiple registrations · ongoing</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== REFERENCES ===================== -->
+<section id="refs">
+  <div class="wrap reveal">
+    <div class="sec-head"><span class="sec-num">07</span><h2>Sources</h2></div>
+    <p class="sec-sub">Primary literature behind this synthesis. Findings are paraphrased; consult the originals for full methods and effect estimates.</p>
+    <ul class="refs">
+      <li>Klausen MK, et al. <b>Once-weekly semaglutide vs placebo in alcohol use disorder and comorbid obesity.</b> Lancet. 2026;407(10540):1687–1698.</li>
+      <li>Hendershot CS, et al. <b>Once-weekly semaglutide in adults with alcohol use disorder: a randomized clinical trial.</b> JAMA Psychiatry. 2025;82(4):395–405.</li>
+      <li>Wang W, Volkow ND, Berger NA, et al. <b>Associations of semaglutide with incidence and recurrence of alcohol use disorder in real-world population.</b> Nat Commun. 2024;15:4548.</li>
+      <li>Qeadan F, et al. <b>GIP/GLP-1 RA prescriptions and substance-related outcomes in OUD and AUD: a real-world analysis.</b> Addiction. 2025;120(2):236–250.</li>
+      <li>Wang W, et al. <b>Semaglutide and opioid-overdose risk in patients with type 2 diabetes and OUD.</b> JAMA Netw Open. 2024.</li>
+      <li>Chuong V, Farokhnia M, Khom S, et al. <b>The GLP-1 analogue semaglutide reduces alcohol drinking and modulates central GABA neurotransmission.</b> JCI Insight. 2023;8(12):e170671.</li>
+      <li>Klausen MK, Thomsen M, Wortwein G, Fink-Jensen A. <b>The role of GLP-1 in addictive disorders.</b> Br J Pharmacol. 2022;179:625–641.</li>
+      <li>Tuesta LM, et al. <b>GLP-1 acts on habenular avoidance circuits to control nicotine intake.</b> Nat Neurosci. 2017;20(5):708–716.</li>
+      <li>Quddos F, et al. <b>Semaglutide and tirzepatide reduce alcohol consumption in individuals with obesity.</b> Sci Rep. 2023;13:20998.</li>
+      <li>Wang W, et al. <b>Association of semaglutide with reduced incidence and relapse of cannabis use disorder.</b> Mol Psychiatry. 2024;29(8):2587–2598.</li>
+      <li>IUPHAR review. <b>GLP-1 and substance use disorders: an emerging pharmacotherapeutic target.</b> Pharmacol Res. 2024;207:107312.</li>
+      <li>Systematic review. <b>GLP-1 receptor agonists for smoking cessation: efficacy, tolerability, neurobiology.</b> Endocrine. 2026.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <div class="wrap">
+    <p class="foot-brand">GLP-1 RAs in Substance Use Disorders</p>
+    <p class="kicker" style="color:var(--ink-faint)">Clinical Evidence Synthesis · rebuilt May 2026</p>
+    <p class="foot-disc">This page is an independent educational synthesis of published research as of May 2026. It is not affiliated with any drug manufacturer and is not medical advice. No GLP-1 receptor agonist is approved for the treatment of any substance use disorder; all uses described are investigational or off-label. Effect estimates are paraphrased and simplified — always consult the primary literature and a qualified clinician before drawing conclusions about treatment. If you or someone you know is struggling with substance use, contact a licensed health professional or a national helpline.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  /* ---- tabs ---- */
+  var tabs=document.querySelectorAll('#tablist .tab');
+  var panels=document.querySelectorAll('#deepdive .panel');
+  function selectTab(key){
+    tabs.forEach(function(t){t.setAttribute('aria-selected', t.dataset.key===key);});
+    panels.forEach(function(p){p.classList.toggle('active', p.dataset.panel===key);});
+  }
+  tabs.forEach(function(t){t.addEventListener('click',function(){selectTab(t.dataset.key);});});
+
+  /* ---- matrix jump to tab ---- */
+  document.querySelectorAll('#matrix .mcell').forEach(function(c){
+    c.addEventListener('click',function(){
+      var key=c.dataset.jump;
+      selectTab(key);
+      document.getElementById('deepdive').scrollIntoView({behavior:'smooth'});
+    });
+  });
+
+  /* ---- table filter ---- */
+  var fbtns=document.querySelectorAll('#filterbar .fbtn');
+  var rows=document.querySelectorAll('#trialtable tbody tr');
+  fbtns.forEach(function(b){
+    b.addEventListener('click',function(){
+      fbtns.forEach(function(x){x.setAttribute('aria-pressed','false');});
+      b.setAttribute('aria-pressed','true');
+      var f=b.dataset.f;
+      rows.forEach(function(r){
+        r.classList.toggle('hide', !(f==='all'||r.dataset.sub===f));
+      });
+    });
+  });
+
+  /* ---- count up ---- */
+  function countUp(el){
+    var target=parseFloat(el.dataset.count);
+    var suffix=el.dataset.suffix||'';
+    var dec=(target%1!==0)?1:0;
+    var dur=1100, start=null;
+    var first=el.querySelector('span'); if(first) first.remove();
+    function step(ts){
+      if(!start)start=ts;
+      var p=Math.min((ts-start)/dur,1);
+      var eased=1-Math.pow(1-p,3);
+      var val=(target*eased).toFixed(dec);
+      el.childNodes[0].nodeValue=val+suffix+' ';
+      if(p<1)requestAnimationFrame(step);
+      else el.childNodes[0].nodeValue=target.toFixed(dec)+suffix+' ';
+    }
+    el.insertBefore(document.createTextNode('0'+suffix+' '), el.firstChild);
+    requestAnimationFrame(step);
+  }
+
+  /* ---- reveal + trigger bars/counts ---- */
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        e.target.classList.add('in');
+        if(e.target.id==='glance'||e.target.querySelector('#matrix')){
+          e.target.querySelectorAll('.bar span').forEach(function(s){s.style.width=s.dataset.w+'%';});
+          e.target.querySelectorAll('.stat').forEach(countUp);
+        }
+        io.unobserve(e.target);
+      }
+    });
+  },{threshold:0.18});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+})();
+</script>
+</body>
+</html>
